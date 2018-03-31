@@ -153,4 +153,5 @@ export class Challenges {
     bT = (bT.length == 1 ? '0' : '') + bT;
     return `#${rT}${gT}${bT}`;
   }
+
 }

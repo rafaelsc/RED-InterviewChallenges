@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Taco</title>
+</head>
+<body>
+  <main id="demo" markdown="1">
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js" integrity="sha256-dwhppIrxD8qC6lNulndZgtIm4XBU9zoMd9OUoXzIDAE=" crossorigin="anonymous"></script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const converter = new showdown.Converter();
+
+      fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
+      .then( (response) => response.json())
+      .then( (myJson) => {
+        //console.log(myJson);
+        document.getElementById("demo").innerHTML = converter.makeHtml(myJson.recipe);
+      });
+    });
+
+  </script>
+</body>
+</html>
