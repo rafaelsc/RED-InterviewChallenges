@@ -1,4 +1,4 @@
-import { Greeter, Challenges } from '../src/index';
+import { Challenges } from '../src/index';
 
 const challenge = new Challenges();
 
