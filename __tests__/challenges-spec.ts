@@ -50,13 +50,13 @@ test('Challege - #04 - Reverse String', () => {
 });
 
 test('Challege - #05 - Is Palindrome', () => {
-  expect(challenge.isPalindrome('racecar')).toBeTruthy;
-  expect(challenge.isPalindrome('a')).toBeTruthy;
-  expect(challenge.isPalindrome('abba')).toBeTruthy;
-  expect(challenge.isPalindrome('Eve')).toBeTruthy;
+  expect(challenge.isPalindromeWord('racecar')).toBeTruthy;
+  expect(challenge.isPalindromeWord('a')).toBeTruthy;
+  expect(challenge.isPalindromeWord('abba')).toBeTruthy;
+  expect(challenge.isPalindromeWord('Eve')).toBeTruthy;
 
-  expect(challenge.isPalindrome('car')).toBeFalsy;
-  expect(challenge.isPalindrome('')).toBeFalsy;
+  expect(challenge.isPalindromeWord('car')).toBeFalsy;
+  expect(challenge.isPalindromeWord('')).toBeFalsy;
 });
 
 test('Challege - #05 - pigLatin', () => {

@@ -92,7 +92,7 @@ export class Challenges {
     return finalPhase;
   }
 
-  public isPalindrome(original:String):Boolean{
+  public isPalindromeWord(original:String):Boolean{
     if (original === undefined || original === null){
       throw new Error('Invalid argument "prices"');
     }
