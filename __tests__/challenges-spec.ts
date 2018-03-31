@@ -65,6 +65,8 @@ test('Challege - #05 - pigLatin', () => {
   expect(challenge.pigLatin('happy')).toBe('appyhay');
   expect(challenge.pigLatin('banana')).toBe('ananabay');
 
+  // expect(challenge.pigLatin('banana pig')).toBe('ananabay igpay');
+
   expect(challenge.pigLatin('cheers')).toBe('eerschay');
   expect(challenge.pigLatin('smile')).toBe('ilesmay');
 

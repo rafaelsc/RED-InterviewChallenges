@@ -105,10 +105,6 @@ export class Challenges {
       throw new Error('Invalid argument "prices"');
     }
 
-    if(original[0].match(/[aeiou]/gi)){
-      return original+'ay';
-    }
-
     var lastNonVogalIndex = 0;
     for (let i = 0; i < original.length; i++) {
       const char = original[i];
@@ -143,7 +139,7 @@ export class Challenges {
     r = Math.max(0, Math.min(r*255, 255));
     g = Math.max(0, Math.min(g*255, 255));
     b = Math.max(0, Math.min(b*255, 255));
-    console.log(r,g,b);
+    //console.log(r,g,b);
     var rT = Math.floor(r).toString(16);
     var gT = Math.floor(g).toString(16);
     var bT = Math.floor(b).toString(16);
