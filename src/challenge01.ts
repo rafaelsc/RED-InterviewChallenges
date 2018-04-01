@@ -1,6 +1,6 @@
 export class Challenges {
 
-  public angleOfMinutes(minuteOfTheCurrentHour: number): number {
+  public angleOfMinutes(minuteOfTheCurrentHour:number): number {
     if (minuteOfTheCurrentHour < 0 || minuteOfTheCurrentHour > 60) {
       throw new RangeError('Invalid minuteOfTheCurrentHour. Allow only values from 0 to 60');
     }
@@ -10,7 +10,7 @@ export class Challenges {
     return (360/60)*minuteOfTheCurrentHour;
   }
 
-  public stockProfit(prices:Array<number>):number | undefined {
+  public stockProfit(prices:number[]):number | undefined {
     if (prices === undefined || prices === null){
       throw new Error('Invalid argument "prices"');
     }
@@ -68,7 +68,7 @@ export class Challenges {
     console.log(song);
   }
 
-  public reserveWordsInPhrase(original:String):String{
+  public reserveWordsInPhrase(original:string):string{
     if (original === undefined || original === null){
       throw new Error('Invalid argument "prices"');
     }
@@ -92,7 +92,7 @@ export class Challenges {
     return finalPhase;
   }
 
-  public isPalindromeWord(original:String):Boolean{
+  public isPalindromeWord(original:string):boolean{
     if (original === undefined || original === null){
       throw new Error('Invalid argument "prices"');
     }
@@ -100,7 +100,7 @@ export class Challenges {
   }
 
 
-  public pigLatin(original:String):String{
+  public pigLatin(original:string):string{
     if (original === undefined || original === null){
       throw new Error('Invalid argument "prices"');
     }
@@ -126,12 +126,10 @@ export class Challenges {
 
   public range(start:number, end:number, step:number = 1):number[]{
     var array = [];
-
     array[0]= start;
     while(step > 0 ? (start + step <= end) : (start + step >= end)){
       array[array.length] = (start+= step);
     }
-
     return array;
   }
 
@@ -139,14 +137,13 @@ export class Challenges {
     r = Math.max(0, Math.min(r*255, 255));
     g = Math.max(0, Math.min(g*255, 255));
     b = Math.max(0, Math.min(b*255, 255));
-    //console.log(r,g,b);
     var rT = Math.floor(r).toString(16);
     var gT = Math.floor(g).toString(16);
     var bT = Math.floor(b).toString(16);
-
     rT = (rT.length == 1 ? '0' : '') + rT;
     gT = (gT.length == 1 ? '0' : '') + gT;
     bT = (bT.length == 1 ? '0' : '') + bT;
+
     return `#${rT}${gT}${bT}`;
   }
 
