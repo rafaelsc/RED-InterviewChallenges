@@ -83,7 +83,7 @@ export class Challenges {
     var finalPhase = '';
     for (let i = 0; i < original.length; i++) {
       const char = original[i];
-      if(char.match(/([A-Z])/gi)){
+      if(char.match(/([A-Z])/g)){
         finalPhase += reversePhase[i].toLocaleUpperCase();
       } else {
         finalPhase += reversePhase[i].toLocaleLowerCase();
